@@ -54,5 +54,5 @@ class Node{
     }
      public Node getNext(){
         return this.next;
-    }
+    } 
 }
