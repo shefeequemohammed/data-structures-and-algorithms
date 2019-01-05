@@ -18,7 +18,7 @@ public class LinkedList{
     public void addNodeToHead(String data){
         Node temp = head;
         head = new Node(data);
-        head.setNext(temp);
+        head.next = temp;
         numOfNodes+=1;
     }
     
@@ -27,32 +27,21 @@ public class LinkedList{
 		Node temp = head;
 		while(temp != null)
 		{
-			System.out.println(temp.getData());
-			temp = temp.getNext();
+			System.out.println(temp.data);
+			temp = temp.next;
 		}
 	}
 }
 
 
 class Node{
-    private String data;
-    private Node next;
+	//No getters & setters to make it simple
+    public String data;
+    public Node next;
     
     public Node(String data){
         this.data = data;
     }
     
-    public void setData(String data){
-        this.data = data;
-    }
     
-    public void setNext(Node next){
-        this.next = next;
-    }
-    public String getData(){
-        return this.data;
-    }
-     public Node getNext(){
-        return this.next;
-    } 
 }
